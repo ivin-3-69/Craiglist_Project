@@ -1,0 +1,65 @@
+{% load static %}
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HommieFuckoff</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav_bar">
+            <a href="/craigslist/" class="brand-logo">CRAIGSLIST</a>
+            <ul id="nav-mobile" class="right">
+                <li><a href="/craigslist/">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h3 style="text-align: center;">What Do You Wanna Search For :</h3>
+        <div class="row">
+            <div class="col s4">
+                <div class="center">
+                    <i class="large material-icons" style="color: #475dd6;">chrome_reader_mode</i>
+                    <p>CRAIGSLIST FACELIFT</p>
+                    <p class="light center">scraper with a nice customised <br>GUI interface.</p>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="center">
+                    <i class="large material-icons" style="color: #fdbc24;">ac_unit</i>
+                    <p>FILTER SEARCHES</p>
+                    <p class="light center">filter your searches to find <br>the best results.</p>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="center">
+                    <i class="large material-icons" style="color: #f87276;">flash_on</i>
+                    <p>FASTER SEARCHES</p>
+                    <p class="light center">optimised searching for <br>faster output.</p>
+                </div>
+            </div>
+        </div>
+        {% block content %}
+        <form action="{% url 'new_search' %}" method="post">
+            {% csrf_token %}
+            <label for="new_search" style="color: rgb(68, 67, 67);">
+                <h3>What You Looking For..</h3>
+            </label>
+            <input type="text" name="new_search_text" placeholder=" dildo,limbo,exhaust.." id="new_search">
+            <button class=" btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class=" material-icons right">send</i>
+            </button>
+        </form>
+        {% endblock content %}
+    </div>
+</body>
+
+</html>

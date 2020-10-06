@@ -1,5 +1,59 @@
 {% extends 'craigslist/base.html' %}
 
 {% block content %}
+{% load static %}
+<h2> {{search_query | title}} </h2>
+
+<div class="row s4">
+    <div class="col s4 m4">
+        <div class="card">
+            <div class="card-image ">
+                <img src="{% static "images/doggy1.jpg" %}">
+                <span class="card-title">CutiePie</span>
+            </div>
+            <div class="card-content">
+                <p>I just searched for cute teens and got this and no I'm not a pervert
+                    but, she really did stole my heart.
+                </p>
+            </div>
+            <div class="card-action">
+                <a href="https://i.pinimg.com/originals/72/af/49/72af49623890869a70b3fdec546bb959.jpg">Go to image:</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s4 m4">
+        <div class="card">
+            <div class="card-image ">
+                <img src="{% static "images/doggy1.jpg" %}">
+                <span class="card-title">CutiePie</span>
+            </div>
+            <div class="card-content">
+                <p>I just searched for cute teens and got this and no I'm not a pervert
+                    but, she really did stole my heart.
+                </p>
+            </div>
+            <div class="card-action">
+                <a href="https://i.pinimg.com/originals/72/af/49/72af49623890869a70b3fdec546bb959.jpg">Go to image:</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s4 m4">
+        <div class="card">
+            <div class="card-image ">
+                {% load static %}
+                <img src="{% static "images/doggy1.jpg" %}">
+                <span class="card-title">CutiePie</span>
+            </div>
+            <div class="card-content">
+                <p>I just searched for cute teens and got this and no I'm not a pervert
+                    but, she really did stole my heart.
+                </p>
+            </div>
+            <div class="card-action">
+                <a href="https://i.pinimg.com/originals/72/af/49/72af49623890869a70b3fdec546bb959.jpg">Go to image:</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

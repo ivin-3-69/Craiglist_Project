@@ -1,7 +1,10 @@
+import requests
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Search
 # Create your views here.
+
+from bs4 import BeautifulSoup
 
 def base(request):
     return render(request,"craigslist/base.html")

@@ -1,0 +1,18 @@
+#text_test{
+    color: black;
+}
+
+body {
+    background: linear-gradient(to right, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+.card {
+    height: 400px; /* Your height here */
+    overflow: hidden;
+}
+
+.card-image {
+    height: 300px; /* Your height here */
+    overflow: hidden;
+}
+

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HommieFuckoff</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/funny.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -49,8 +49,8 @@
         {% block content %}
         <form action="{% url 'new_search' %}" method="post">
             {% csrf_token %}
-            <label for="new_search" style="color: rgb(68, 67, 67);">
-                <h3>What You Looking For..</h3>
+            <label for="new_search" >
+                <h3 id="text_test" >What You Looking For..</h3>
             </label>
             <input type="text" name="new_search_text" placeholder=" dildo,limbo,exhaust.." id="new_search">
             <button class=" btn waves-effect waves-light" type="submit" name="action">Submit
